@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give information about the scientist</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #F8F6F4;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5C5470;
+            font-weight: 700;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #5C5470;
+        }
+
+        .btn-secondary {
+            background: #90b9dc;
+            border: none;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+            .btn-secondary:hover {
+                background: #446983;
+            }
+
+        .alert {
+            margin-top: 15px;
+        }
+
+        .result-box {
+            background: #7dc4e5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #3e4951;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>💡Discover the Life of a Scientist with AI</h2>
+        <p class="text-center">Enter the scientist’s name and discover their life story.</p>
+        <form method="post">
+            <label for="ingredients" class="form-label">Enter your scientist’s name:</label>
+            <input type="text" id="ingredients" name="scientistName" class="form-control" placeholder="e.g: Cezeri" required />
+            <br />
+            <button type="submit" class="btn btn-secondary w-100">Give Information 📖</button>
+        </form>
+        <div class="result-box">
+            <h4>📜 Scientist Life:</h4>
+            <p>@ViewBag.scientistLife</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
